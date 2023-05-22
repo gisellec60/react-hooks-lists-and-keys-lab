@@ -5,13 +5,12 @@ function ProjectList({ projects }) {
   const projList = projects.map((listObj) => {
     return <ProjectItem key={listObj.id} name={listObj.name} about={listObj.about} technologies={listObj.technologies} />
   })
-
   return (
     <div id="projects">
       <h2>My Projects</h2>
       <div id="project-list">
         {projList}
-        <ProjectItem technologies={projList.technologies}/> 
+        <ProjectItem technologies={projects.technologies}/> 
         </div>
     </div>
   );

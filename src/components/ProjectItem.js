@@ -1,11 +1,12 @@
  import React from "react";
 
 function ProjectItem({ name, about, technologies }) {
-  // console.log("this is tech",technologies)
+  console.log("before .map", technologies)
   const tech = technologies.map ((techItem) => {
-    console.log("this is tech",techItem)
-    return <span> {techItem} </span>
+      console.log("this is tech after .map: ",techItem)
+      return <span>{techItem}</span>
   }) 
+
   return (
     <div className="project-item">
       <h3>{name}</h3>
