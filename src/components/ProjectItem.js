@@ -1,10 +1,9 @@
  import React from "react";
+import ProjectList from "./ProjectList";
 
 function ProjectItem({ name, about, technologies }) {
-  console.log("before .map", technologies)
-  const tech = technologies.map ((techItem) => {
-      console.log("this is tech after .map: ",techItem)
-      return <span>{techItem}</span>
+    const tech = technologies.map ((techItem) => {
+       return <span key={techItem}>{techItem}</span>
   }) 
 
   return (
